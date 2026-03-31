@@ -853,50 +853,79 @@
   </section>
 
   <!-- CONNECT -->
-  <section id="connect">
-    <div class="reveal">
-      <span class="section-label">Get In Touch</span>
-      <h2 class="section-title">Connect with us</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="connect-grid">
-      <div class="connect-left reveal">
-        <p>Want to make some money at a Pennington event (think Homecoming, etc), drive engagement, or have a good time? Our inbox is open. If you're considering donating or fundraising alongside us, we would love to work with you and would appreciate your support.</p>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="contact-detail-text"><span>Email</span><p>tpszorb@gmail.com</p></div>
+<section id="connect">
+  <div class="reveal">
+    <span class="section-label">Get In Touch</span>
+    <h2 class="section-title">Connect with us</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="connect-grid">
+    <div class="connect-left reveal">
+      <p>Want to make some money at a Pennington event (think Homecoming, etc), drive engagement, or have a good time? Our inbox is open. If you're considering donating or fundraising alongside us, we would love to work with you and would appreciate your support.</p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
         </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="contact-detail-text"><span>Location</span><p>The Pennington School, Pennington, NJ</p></div>
+        <div class="contact-detail-text">
+          <span>Email</span>
+          <p>tpszorb@gmail.com</p>
         </div>
       </div>
 
-      <div class="contact-form reveal reveal-delay-2">
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="contact-detail-text">
+          <span>Location</span>
+          <p>The Pennington School, Pennington, NJ</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form reveal reveal-delay-2">
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="b2eec8ad-8664-4aa9-8c20-971d17ce2285">
+
+        <!-- Optional: subject -->
+        <input type="hidden" name="subject" value="New ZORB Club Contact Form Submission">
+
         <div id="form-fields">
           <h3 class="form-title">Get In Touch</h3>
-          <p class="form-sub">Replying to forms is more fun than it seems for us; please don't hesitate to reach out. This form sends an email to tpszorb@gmail.com</p>
+          <p class="form-sub">Replying to forms is more fun than it seems for us; please don't hesitate to reach out.</p>
+
           <div class="form-row">
             <div class="form-group">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="first_name" placeholder="Jane" />
+              <input type="text" id="fname" name="first_name" placeholder="Jane" required />
             </div>
+
             <div class="form-group">
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="last_name" placeholder="Smith" />
+              <input type="text" id="lname" name="last_name" placeholder="Smith" required />
             </div>
           </div>
+
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" />
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
           </div>
+
           <div class="form-group">
             <label for="inquiry">Inquiry Type</label>
-            <select id="inquiry" name="inquiry_type">
+            <select id="inquiry" name="inquiry_type" required>
               <option value="" disabled selected>Select a subject…</option>
               <option value="Borrow Our ZORBs">Borrow Our ZORBs (Club Inquiry)</option>
               <option value="Donate or Fundraise">Donate or Fundraise</option>
@@ -904,22 +933,22 @@
               <option value="Other">Other</option>
             </select>
           </div>
+
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us what's on your mind…"></textarea>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
           </div>
-          <button class="form-submit" id="submit-btn" onclick="submitForm(event)">contact the ZORB club</button>
+
+          <button class="form-submit" type="submit">
+            contact the ZORB club
+          </button>
         </div>
-        <div class="form-success" id="form-success">
-          <div class="checkmark">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <h3>Message Received</h3>
-          <p>Thank you for reaching out. We'll be in touch within 48 hours.</p>
-        </div>
-      </div>
+
+      </form>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer>
